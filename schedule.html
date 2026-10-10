@@ -1,1 +1,136 @@
-PLACEHOLDER_SCHEDULE
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2027 Schedule | Freedom Racing Garage</title>
+  <meta name="description" content="Full 2027 NASCAR Craftsman Truck Series schedule for Freedom Racing Enterprises and Spencer Boyd #76.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, .font-oswald { font-family: 'Oswald', sans-serif; }
+  </style>
+</head>
+<body class="bg-black text-white">
+  <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-md border-b border-red-900/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="index.html" class="flex items-center space-x-2">
+          <div class="w-8 h-8 bg-red-600 rounded-sm flex items-center justify-center">
+            <i class="fas fa-flag-checkered text-white text-sm"></i>
+          </div>
+          <div>
+            <div class="font-oswald text-xl font-bold tracking-wider">FREEDOM RACING</div>
+            <div class="text-xs text-red-500 -mt-1">GARAGE</div>
+          </div>
+        </a>
+        <div class="hidden md:flex space-x-8 items-center">
+          <a href="index.html" class="hover:text-red-500 transition">Home</a>
+          <a href="schedule.html" class="text-red-500 font-medium">2027 Schedule</a>
+          <a href="sponsorship.html" class="hover:text-red-500 transition">Sponsorship</a>
+          <a href="about.html" class="hover:text-red-500 transition">About the Team</a>
+          <a href="contact.html" class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded font-medium transition">Become a Sponsor</a>
+        </div>
+        <button class="md:hidden text-white" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-black border-t border-red-900/30">
+      <div class="px-4 py-3 space-y-2">
+        <a href="index.html" class="block py-2">Home</a>
+        <a href="schedule.html" class="block py-2 text-red-500">2027 Schedule</a>
+        <a href="sponsorship.html" class="block py-2">Sponsorship</a>
+        <a href="about.html" class="block py-2">About the Team</a>
+        <a href="contact.html" class="block py-2 bg-red-600 text-center rounded">Become a Sponsor</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-24 pb-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <p class="text-red-500 font-medium tracking-widest uppercase mb-2">NASCAR Craftsman Truck Series</p>
+        <h1 class="font-oswald text-4xl md:text-6xl font-bold">2027 SCHEDULE</h1>
+        <p class="text-gray-400 mt-4 max-w-2xl mx-auto">25 races. Full season for Spencer Boyd and the #76 Freedom Racing Enterprises Chevrolet.</p>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left">
+          <thead>
+            <tr class="border-b border-red-900/50">
+              <th class="py-4 px-4 font-oswald text-red-500">#</th>
+              <th class="py-4 px-4 font-oswald">Date</th>
+              <th class="py-4 px-4 font-oswald">Track</th>
+              <th class="py-4 px-4 font-oswald hidden md:table-cell">Location</th>
+              <th class="py-4 px-4 font-oswald hidden lg:table-cell">Notes</th>
+              <th class="py-4 px-4 font-oswald">Sponsor</th>
+            </tr>
+          </thead>
+          <tbody id="schedule-body" class="divide-y divide-white/10">
+          </tbody>
+        </table>
+      </div>
+
+      <div class="mt-8 text-center text-sm text-gray-500">
+        <p>Schedule subject to change. Start times and broadcast details will be updated as they become available. All races on FOX or FS1.</p>
+        <p class="mt-2">Chase begins at New Hampshire. Championship race at Homestead-Miami.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-zinc-950 border-t border-red-900/30 py-8 text-center text-gray-500 text-sm">
+    <p>© 2026 Freedom Racing Garage • <a href="index.html" class="hover:text-red-500">Home</a></p>
+  </footer>
+
+  <script>
+    const races = [
+      { num: 1, date: "Fri, Feb 19", track: "Daytona International Speedway", location: "Daytona Beach, FL", notes: "Fresh From Florida 250" },
+      { num: 2, date: "Sat, Feb 27", track: "EchoPark Speedway", location: "Hampton, GA", notes: "Atlanta" },
+      { num: 3, date: "Sat, Mar 6", track: "Streets of St. Petersburg", location: "St. Petersburg, FL", notes: "Street course" },
+      { num: 4, date: "Fri, Apr 2", track: "Darlington Raceway", location: "Darlington, SC", notes: "" },
+      { num: 5, date: "Fri, Apr 9", track: "Bristol Motor Speedway", location: "Bristol, TN", notes: "" },
+      { num: 6, date: "Fri, Apr 30", track: "Texas Motor Speedway", location: "Fort Worth, TX", notes: "" },
+      { num: 7, date: "Sat, May 8", track: "Kansas Speedway", location: "Kansas City, KS", notes: "" },
+      { num: 8, date: "Fri, May 21", track: "North Wilkesboro Speedway", location: "North Wilkesboro, NC", notes: "" },
+      { num: 9, date: "Fri, May 28", track: "Charlotte Motor Speedway", location: "Concord, NC", notes: "" },
+      { num: 10, date: "Fri, Jun 4", track: "Nashville Superspeedway", location: "Lebanon, TN", notes: "" },
+      { num: 11, date: "Fri, Jun 11", track: "Pocono Raceway", location: "Long Pond, PA", notes: "MillerTech Battery 200" },
+      { num: 12, date: "Sat, Jun 19", track: "Michigan International Speedway", location: "Brooklyn, MI", notes: "" },
+      { num: 13, date: "Sat, Jul 10", track: "Lime Rock Park", location: "Lakeville, CT", notes: "" },
+      { num: 14, date: "Sat, Jul 17", track: "EchoPark Speedway", location: "Hampton, GA", notes: "Atlanta" },
+      { num: 15, date: "Fri, Jul 23", track: "Lucas Oil Indianapolis Raceway Park", location: "Brownsburg, IN", notes: "" },
+      { num: 16, date: "Thu, Aug 12", track: "Bristol Motor Speedway", location: "Bristol, TN", notes: "" },
+      { num: 17, date: "Fri, Aug 20", track: "Bowman Gray Stadium", location: "Winston-Salem, NC", notes: "New venue" },
+      { num: 18, date: "Sun, Sep 5", track: "Canadian Tire Motorsport Park", location: "Bowmanville, ON", notes: "Regular season finale" },
+      { num: 19, date: "Sat, Sep 25", track: "New Hampshire Motor Speedway", location: "Loudon, NH", notes: "Chase begins" },
+      { num: 20, date: "Fri, Oct 1", track: "Kansas Speedway", location: "Kansas City, KS", notes: "Chase" },
+      { num: 21, date: "Fri, Oct 15", track: "Charlotte Motor Speedway", location: "Concord, NC", notes: "Chase" },
+      { num: 22, date: "Fri, Oct 22", track: "Phoenix Raceway", location: "Avondale, AZ", notes: "Chase" },
+      { num: 23, date: "Fri, Oct 29", track: "Talladega Superspeedway", location: "Talladega, AL", notes: "Chase" },
+      { num: 24, date: "Fri, Nov 5", track: "Martinsville Speedway", location: "Martinsville, VA", notes: "Chase" },
+      { num: 25, date: "Fri, Nov 12", track: "Homestead-Miami Speedway", location: "Homestead, FL", notes: "Championship" }
+    ];
+
+    const tbody = document.getElementById('schedule-body');
+    races.forEach(race => {
+      const isChase = race.notes.includes('Chase') || race.notes.includes('Championship') || race.notes.includes('finale');
+      const row = document.createElement('tr');
+      row.className = isChase ? 'bg-red-950/30' : '';
+      row.innerHTML = `
+        <td class="py-4 px-4 font-medium">${race.num}</td>
+        <td class="py-4 px-4 whitespace-nowrap">${race.date}</td>
+        <td class="py-4 px-4 font-medium">${race.track}</td>
+        <td class="py-4 px-4 text-gray-400 hidden md:table-cell">${race.location}</td>
+        <td class="py-4 px-4 text-gray-400 hidden lg:table-cell">${race.notes}</td>
+        <td class="py-4 px-4">
+          <a href="sponsorship.html?race=${race.num}" class="text-red-500 hover:text-red-400 text-sm font-medium">Inquire</a>
+        </td>
+      `;
+      tbody.appendChild(row);
+    });
+  </script>
+</body>
+</html>
