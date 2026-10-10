@@ -1,1 +1,127 @@
-PLACEHOLDER_SPONSORSHIP
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sponsorship Opportunities | Freedom Racing Garage</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, .font-oswald { font-family: 'Oswald', sans-serif; }
+    .card-hover:hover { transform: translateY(-4px); transition: all 0.3s ease; }
+  </style>
+</head>
+<body class="bg-black text-white">
+  <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-md border-b border-red-900/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="index.html" class="flex items-center space-x-2">
+          <div class="w-8 h-8 bg-red-600 rounded-sm flex items-center justify-center">
+            <i class="fas fa-flag-checkered text-white text-sm"></i>
+          </div>
+          <div>
+            <div class="font-oswald text-xl font-bold tracking-wider">FREEDOM RACING</div>
+            <div class="text-xs text-red-500 -mt-1">GARAGE</div>
+          </div>
+        </a>
+        <div class="hidden md:flex space-x-8 items-center">
+          <a href="index.html" class="hover:text-red-500 transition">Home</a>
+          <a href="schedule.html" class="hover:text-red-500 transition">2027 Schedule</a>
+          <a href="sponsorship.html" class="text-red-500 font-medium">Sponsorship</a>
+          <a href="about.html" class="hover:text-red-500 transition">About the Team</a>
+          <a href="contact.html" class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded font-medium transition">Become a Sponsor</a>
+        </div>
+        <button class="md:hidden text-white" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-black border-t border-red-900/30">
+      <div class="px-4 py-3 space-y-2">
+        <a href="index.html" class="block py-2">Home</a>
+        <a href="schedule.html" class="block py-2">2027 Schedule</a>
+        <a href="sponsorship.html" class="block py-2 text-red-500">Sponsorship</a>
+        <a href="about.html" class="block py-2">About the Team</a>
+        <a href="contact.html" class="block py-2 bg-red-600 text-center rounded">Become a Sponsor</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-24 pb-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <p class="text-red-500 font-medium tracking-widest uppercase mb-2">Partnership Opportunities</p>
+        <h1 class="font-oswald text-4xl md:text-6xl font-bold">2027 SPONSORSHIP</h1>
+        <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Put your brand on the #76 Chevrolet Silverado with Spencer Boyd. Primary and sticker placements available for every race.</p>
+      </div>
+
+      <div class="bg-zinc-900 border border-white/10 rounded-2xl p-6 mb-10">
+        <h2 class="font-oswald text-2xl mb-4">Sponsorship Packages</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="text-red-500 font-semibold mb-2">Primary Placement</h3>
+            <p class="text-gray-400 text-sm">Full logo prominence on the truck (hood, sides, or major panels). Maximum visibility on TV, track, and social media. Includes team social posts and activation opportunities.</p>
+          </div>
+          <div>
+            <h3 class="text-red-500 font-semibold mb-2">Sticker Placement</h3>
+            <p class="text-gray-400 text-sm">Associate/sticker logo on the truck. Great entry-level exposure for brands wanting NASCAR visibility without a full primary.</p>
+          </div>
+        </div>
+        <p class="text-gray-500 text-sm mt-4">Pricing is race-specific and based on track size, TV audience, and date. Contact us for current availability and packages.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="all-races">
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-zinc-950 border-t border-red-900/30 py-8 text-center text-gray-500 text-sm">
+    <p>© 2026 Freedom Racing Garage • <a href="index.html" class="hover:text-red-500">Home</a></p>
+  </footer>
+
+  <script>
+    const races = [
+      { num: 1, date: "Fri, Feb 19", track: "Daytona International Speedway", city: "Daytona Beach, FL" },
+      { num: 2, date: "Sat, Feb 27", track: "EchoPark Speedway", city: "Hampton, GA" },
+      { num: 3, date: "Sat, Mar 6", track: "Streets of St. Petersburg", city: "St. Petersburg, FL" },
+      { num: 4, date: "Fri, Apr 2", track: "Darlington Raceway", city: "Darlington, SC" },
+      { num: 5, date: "Fri, Apr 9", track: "Bristol Motor Speedway", city: "Bristol, TN" },
+      { num: 6, date: "Fri, Apr 30", track: "Texas Motor Speedway", city: "Fort Worth, TX" },
+      { num: 7, date: "Sat, May 8", track: "Kansas Speedway", city: "Kansas City, KS" },
+      { num: 8, date: "Fri, May 21", track: "North Wilkesboro Speedway", city: "North Wilkesboro, NC" },
+      { num: 9, date: "Fri, May 28", track: "Charlotte Motor Speedway", city: "Concord, NC" },
+      { num: 10, date: "Fri, Jun 4", track: "Nashville Superspeedway", city: "Lebanon, TN" },
+      { num: 11, date: "Fri, Jun 11", track: "Pocono Raceway", city: "Long Pond, PA" },
+      { num: 12, date: "Sat, Jun 19", track: "Michigan International Speedway", city: "Brooklyn, MI" },
+      { num: 13, date: "Sat, Jul 10", track: "Lime Rock Park", city: "Lakeville, CT" },
+      { num: 14, date: "Sat, Jul 17", track: "EchoPark Speedway", city: "Hampton, GA" },
+      { num: 15, date: "Fri, Jul 23", track: "Lucas Oil Indianapolis Raceway Park", city: "Brownsburg, IN" },
+      { num: 16, date: "Thu, Aug 12", track: "Bristol Motor Speedway", city: "Bristol, TN" },
+      { num: 17, date: "Fri, Aug 20", track: "Bowman Gray Stadium", city: "Winston-Salem, NC" },
+      { num: 18, date: "Sun, Sep 5", track: "Canadian Tire Motorsport Park", city: "Bowmanville, ON" },
+      { num: 19, date: "Sat, Sep 25", track: "New Hampshire Motor Speedway", city: "Loudon, NH" },
+      { num: 20, date: "Fri, Oct 1", track: "Kansas Speedway", city: "Kansas City, KS" },
+      { num: 21, date: "Fri, Oct 15", track: "Charlotte Motor Speedway", city: "Concord, NC" },
+      { num: 22, date: "Fri, Oct 22", track: "Phoenix Raceway", city: "Avondale, AZ" },
+      { num: 23, date: "Fri, Oct 29", track: "Talladega Superspeedway", city: "Talladega, AL" },
+      { num: 24, date: "Fri, Nov 5", track: "Martinsville Speedway", city: "Martinsville, VA" },
+      { num: 25, date: "Fri, Nov 12", track: "Homestead-Miami Speedway", city: "Homestead, FL" }
+    ];
+
+    const container = document.getElementById('all-races');
+    races.forEach(race => {
+      const card = document.createElement('div');
+      card.className = 'bg-zinc-900 rounded-xl border border-white/10 p-5 card-hover';
+      card.innerHTML = `
+        <div class="text-red-500 text-sm font-medium mb-1">${race.date}</div>
+        <h3 class="font-oswald text-lg font-semibold mb-1">${race.track}</h3>
+        <p class="text-gray-400 text-sm mb-4">${race.city}</p>
+        <a href="contact.html?race=${encodeURIComponent(race.track)}&date=${encodeURIComponent(race.date)}" class="block text-center bg-red-600 hover:bg-red-700 py-2 rounded font-medium text-sm transition">Inquire About This Race</a>
+      `;
+      container.appendChild(card);
+    });
+  </script>
+</body>
+</html>
