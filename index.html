@@ -1,1 +1,195 @@
-PLACEHOLDER_INDEX
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freedom Racing Garage | Spencer Boyd #76 | 2027 NASCAR Craftsman Truck Series</title>
+  <meta name="description" content="Official sponsorship site for Freedom Racing Enterprises - Spencer Boyd #76 Chevrolet in the 2027 NASCAR Craftsman Truck Series. Come take a ride with us!">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, .font-oswald { font-family: 'Oswald', sans-serif; }
+    .hero-bg { background: linear-gradient(135deg, #0a0a0a 0%, #1a0505 50%, #0a0a0a 100%); }
+    .card-hover:hover { transform: translateY(-4px); transition: all 0.3s ease; }
+  </style>
+</head>
+<body class="bg-black text-white">
+  <!-- Navigation -->
+  <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-md border-b border-red-900/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center space-x-2">
+          <div class="w-8 h-8 bg-red-600 rounded-sm flex items-center justify-center">
+            <i class="fas fa-flag-checkered text-white text-sm"></i>
+          </div>
+          <div>
+            <div class="font-oswald text-xl font-bold tracking-wider">FREEDOM RACING</div>
+            <div class="text-xs text-red-500 -mt-1">GARAGE</div>
+          </div>
+        </div>
+        <div class="hidden md:flex space-x-8 items-center">
+          <a href="index.html" class="text-red-500 font-medium">Home</a>
+          <a href="schedule.html" class="hover:text-red-500 transition">2027 Schedule</a>
+          <a href="sponsorship.html" class="hover:text-red-500 transition">Sponsorship</a>
+          <a href="about.html" class="hover:text-red-500 transition">About the Team</a>
+          <a href="contact.html" class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded font-medium transition">Become a Sponsor</a>
+        </div>
+        <button class="md:hidden text-white" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-black border-t border-red-900/30">
+      <div class="px-4 py-3 space-y-2">
+        <a href="index.html" class="block py-2 text-red-500">Home</a>
+        <a href="schedule.html" class="block py-2 hover:text-red-500">2027 Schedule</a>
+        <a href="sponsorship.html" class="block py-2 hover:text-red-500">Sponsorship</a>
+        <a href="about.html" class="block py-2 hover:text-red-500">About the Team</a>
+        <a href="contact.html" class="block py-2 bg-red-600 text-center rounded">Become a Sponsor</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-bg pt-24 pb-16 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-red-500 font-medium tracking-widest uppercase mb-2">NASCAR Craftsman Truck Series</p>
+          <h1 class="font-oswald text-5xl md:text-7xl font-bold leading-tight mb-4">
+            COME TAKE A RIDE<br>WITH US
+          </h1>
+          <h2 class="text-3xl md:text-5xl font-oswald text-white/90 mb-2">2027 SEASON</h2>
+          <p class="text-xl text-gray-300 mb-6">Spencer Boyd • Truck #76 • Chevrolet Silverado</p>
+          <div class="flex flex-wrap gap-4">
+            <a href="sponsorship.html" class="bg-red-600 hover:bg-red-700 px-8 py-4 rounded-lg font-semibold text-lg transition">View Sponsorships</a>
+            <a href="schedule.html" class="border border-white/30 hover:border-red-500 px-8 py-4 rounded-lg font-semibold text-lg transition">2027 Schedule</a>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="bg-gradient-to-br from-red-600/20 to-transparent rounded-2xl p-8 border border-red-900/30">
+            <div class="aspect-video bg-black/50 rounded-xl flex items-center justify-center border border-white/10">
+              <div class="text-center">
+                <i class="fas fa-truck text-6xl text-red-500 mb-4"></i>
+                <p class="text-gray-400">#76 Chevrolet Silverado</p>
+                <p class="text-sm text-gray-500 mt-2">Freedom Racing Enterprises</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sponsorship Opportunities -->
+  <section class="py-20 bg-zinc-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <p class="text-red-500 font-medium tracking-widest uppercase mb-2">2027 Race Sponsorship</p>
+        <h2 class="font-oswald text-4xl md:text-5xl font-bold">SECURE YOUR SPOT ON THE #76</h2>
+        <p class="text-gray-400 mt-4 max-w-2xl mx-auto">High-visibility partnerships designed to put your brand in victory lane. Primary and sticker placements available for select races.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6" id="race-grid">
+      </div>
+      
+      <div class="text-center mt-10">
+        <a href="sponsorship.html" class="inline-block border border-red-600 text-red-500 hover:bg-red-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition">View All Sponsorship Opportunities</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Stats / About Teaser -->
+  <section class="py-16 bg-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8 text-center">
+        <div class="p-6">
+          <div class="text-4xl font-oswald text-red-500 mb-2">#76</div>
+          <p class="text-gray-400">Chevrolet Silverado</p>
+        </div>
+        <div class="p-6">
+          <div class="text-4xl font-oswald text-red-500 mb-2">25</div>
+          <p class="text-gray-400">Races in 2027</p>
+        </div>
+        <div class="p-6">
+          <div class="text-4xl font-oswald text-red-500 mb-2">FULL</div>
+          <p class="text-gray-400">Season Effort</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-zinc-950 border-t border-red-900/30 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="font-oswald text-xl font-bold mb-4">FREEDOM RACING GARAGE</div>
+          <p class="text-gray-400 text-sm">Home of Spencer Boyd and the #76 Freedom Racing Enterprises Chevrolet in the NASCAR Craftsman Truck Series.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-gray-400 text-sm">
+            <li><a href="schedule.html" class="hover:text-red-500">2027 Schedule</a></li>
+            <li><a href="sponsorship.html" class="hover:text-red-500">Sponsorship</a></li>
+            <li><a href="about.html" class="hover:text-red-500">About the Team</a></li>
+            <li><a href="contact.html" class="hover:text-red-500">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Follow Us</h4>
+          <div class="flex space-x-4">
+            <a href="https://x.com/FreedomRacing76" class="text-gray-400 hover:text-red-500"><i class="fab fa-x-twitter text-xl"></i></a>
+            <a href="https://www.instagram.com/freedomracingenterprises/" class="text-gray-400 hover:text-red-500"><i class="fab fa-instagram text-xl"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Contact</h4>
+          <p class="text-gray-400 text-sm">Mooresville, North Carolina</p>
+          <p class="text-gray-400 text-sm mt-2">sponsorship@freedomracingenterprises.com</p>
+        </div>
+      </div>
+      <div class="border-t border-white/10 mt-8 pt-8 text-center text-gray-500 text-sm">
+        <p>Built on passion. Driven by purpose. Racing for freedom.</p>
+        <p class="mt-2">© 2026 Freedom Racing Garage. All Rights Reserved. | Chevrolet | Craftsman Truck Series</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const featuredRaces = [
+      { date: "Fri, Feb 19", track: "Daytona International Speedway", city: "Daytona Beach, FL", primary: "Contact", sticker: "Contact" },
+      { date: "Sat, Feb 27", track: "EchoPark Speedway", city: "Hampton, GA", primary: "Contact", sticker: "Contact" },
+      { date: "Fri, Jun 4", track: "Nashville Superspeedway", city: "Lebanon, TN", primary: "Contact", sticker: "Contact" },
+      { date: "Fri, Nov 12", track: "Homestead-Miami Speedway", city: "Homestead, FL", primary: "Contact", sticker: "Contact" }
+    ];
+
+    const grid = document.getElementById('race-grid');
+    featuredRaces.forEach(race => {
+      const card = document.createElement('div');
+      card.className = 'bg-zinc-900 rounded-xl overflow-hidden border border-white/10 card-hover';
+      card.innerHTML = `
+        <div class="bg-red-600 px-4 py-2 text-sm font-medium">${race.date}</div>
+        <div class="p-5">
+          <h3 class="font-oswald text-xl font-semibold mb-1">${race.track.split(' ')[0]}</h3>
+          <p class="text-gray-400 text-sm mb-4">${race.city}</p>
+          <div class="grid grid-cols-2 gap-2 text-sm">
+            <div class="bg-black/50 rounded p-2 text-center">
+              <div class="text-gray-500 text-xs">PRIMARY</div>
+              <div class="font-semibold">${race.primary}</div>
+            </div>
+            <div class="bg-black/50 rounded p-2 text-center">
+              <div class="text-gray-500 text-xs">STICKER</div>
+              <div class="font-semibold">${race.sticker}</div>
+            </div>
+          </div>
+          <a href="sponsorship.html" class="block mt-4 text-center bg-red-600/20 hover:bg-red-600 text-red-400 hover:text-white py-2 rounded text-sm font-medium transition">View Details</a>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+  </script>
+</body>
+</html>
