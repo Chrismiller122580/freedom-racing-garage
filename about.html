@@ -1,1 +1,95 @@
-PLACEHOLDER_ABOUT
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About the Team | Freedom Racing Garage</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, .font-oswald { font-family: 'Oswald', sans-serif; }
+  </style>
+</head>
+<body class="bg-black text-white">
+  <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-md border-b border-red-900/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="index.html" class="flex items-center space-x-2">
+          <div class="w-8 h-8 bg-red-600 rounded-sm flex items-center justify-center">
+            <i class="fas fa-flag-checkered text-white text-sm"></i>
+          </div>
+          <div>
+            <div class="font-oswald text-xl font-bold tracking-wider">FREEDOM RACING</div>
+            <div class="text-xs text-red-500 -mt-1">GARAGE</div>
+          </div>
+        </a>
+        <div class="hidden md:flex space-x-8 items-center">
+          <a href="index.html" class="hover:text-red-500 transition">Home</a>
+          <a href="schedule.html" class="hover:text-red-500 transition">2027 Schedule</a>
+          <a href="sponsorship.html" class="hover:text-red-500 transition">Sponsorship</a>
+          <a href="about.html" class="text-red-500 font-medium">About the Team</a>
+          <a href="contact.html" class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded font-medium transition">Become a Sponsor</a>
+        </div>
+        <button class="md:hidden text-white" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-black border-t border-red-900/30">
+      <div class="px-4 py-3 space-y-2">
+        <a href="index.html" class="block py-2">Home</a>
+        <a href="schedule.html" class="block py-2">2027 Schedule</a>
+        <a href="sponsorship.html" class="block py-2">Sponsorship</a>
+        <a href="about.html" class="block py-2 text-red-500">About the Team</a>
+        <a href="contact.html" class="block py-2 bg-red-600 text-center rounded">Become a Sponsor</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-24 pb-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <p class="text-red-500 font-medium tracking-widest uppercase mb-2">Freedom Racing Enterprises</p>
+        <h1 class="font-oswald text-4xl md:text-6xl font-bold">ABOUT THE TEAM</h1>
+      </div>
+
+      <div class="prose prose-invert max-w-none">
+        <p class="text-lg text-gray-300 mb-6">
+          Freedom Racing Enterprises (FRE) was founded in 2024 by Chris Miller and Spencer Boyd. Based in Mooresville, North Carolina, the team fields the No. 76 Chevrolet Silverado full-time in the NASCAR Craftsman Truck Series.
+        </p>
+        
+        <p class="text-gray-300 mb-6">
+          Veteran NASCAR crew chief and broadcaster Jeff Hammond serves as General Manager. The team races with a focus on performance, partnership, and putting brands in front of passionate NASCAR fans.
+        </p>
+
+        <h2 class="font-oswald text-3xl mt-10 mb-4">Spencer Boyd – Driver & Co-Owner</h2>
+        <p class="text-gray-300 mb-6">
+          Spencer Boyd is a professional NASCAR driver and co-owner of Freedom Racing Enterprises. Known for his underdog spirit and memorable moments (including a Talladega win earlier in his career), Boyd pilots the #76 for the majority of the season while also developing other drivers in the truck.
+        </p>
+
+        <h2 class="font-oswald text-3xl mt-10 mb-4">The #76</h2>
+        <p class="text-gray-300 mb-6">
+          The No. 76 Chevrolet Silverado represents Freedom Racing Enterprises on the national stage. Primary sponsors have included Freedom Warranty, Nor-Cal Equipment Rentals, and others. The team continues to build competitive identity race by race.
+        </p>
+
+        <div class="bg-zinc-900 border border-white/10 rounded-xl p-6 mt-8">
+          <h3 class="font-oswald text-xl mb-3">Team Info</h3>
+          <ul class="space-y-2 text-gray-300">
+            <li><strong>Series:</strong> NASCAR Craftsman Truck Series</li>
+            <li><strong>Truck:</strong> #76 Chevrolet Silverado</li>
+            <li><strong>Base:</strong> Mooresville, North Carolina</li>
+            <li><strong>Founded:</strong> 2024</li>
+            <li><strong>Owners:</strong> Chris Miller & Spencer Boyd</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-zinc-950 border-t border-red-900/30 py-8 text-center text-gray-500 text-sm">
+    <p>© 2026 Freedom Racing Garage • <a href="index.html" class="hover:text-red-500">Home</a></p>
+  </footer>
+</body>
+</html>
