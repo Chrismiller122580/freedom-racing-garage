@@ -1,1 +1,108 @@
-PLACEHOLDER_CONTACT
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Become a Sponsor | Freedom Racing Garage</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, .font-oswald { font-family: 'Oswald', sans-serif; }
+  </style>
+</head>
+<body class="bg-black text-white">
+  <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-md border-b border-red-900/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="index.html" class="flex items-center space-x-2">
+          <div class="w-8 h-8 bg-red-600 rounded-sm flex items-center justify-center">
+            <i class="fas fa-flag-checkered text-white text-sm"></i>
+          </div>
+          <div>
+            <div class="font-oswald text-xl font-bold tracking-wider">FREEDOM RACING</div>
+            <div class="text-xs text-red-500 -mt-1">GARAGE</div>
+          </div>
+        </a>
+        <div class="hidden md:flex space-x-8 items-center">
+          <a href="index.html" class="hover:text-red-500 transition">Home</a>
+          <a href="schedule.html" class="hover:text-red-500 transition">2027 Schedule</a>
+          <a href="sponsorship.html" class="hover:text-red-500 transition">Sponsorship</a>
+          <a href="about.html" class="hover:text-red-500 transition">About the Team</a>
+          <a href="contact.html" class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded font-medium transition">Become a Sponsor</a>
+        </div>
+        <button class="md:hidden text-white" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-black border-t border-red-900/30">
+      <div class="px-4 py-3 space-y-2">
+        <a href="index.html" class="block py-2">Home</a>
+        <a href="schedule.html" class="block py-2">2027 Schedule</a>
+        <a href="sponsorship.html" class="block py-2">Sponsorship</a>
+        <a href="about.html" class="block py-2">About the Team</a>
+        <a href="contact.html" class="block py-2 text-red-500 bg-red-600/20 text-center rounded">Become a Sponsor</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-24 pb-16">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <h1 class="font-oswald text-4xl md:text-5xl font-bold">BECOME A SPONSOR</h1>
+        <p class="text-gray-400 mt-4">Tell us about your brand and which races interest you. We'll follow up with availability and package options.</p>
+      </div>
+
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6 bg-zinc-900 border border-white/10 rounded-2xl p-8">
+        <div>
+          <label class="block text-sm font-medium mb-2">Name</label>
+          <input type="text" name="name" required class="w-full bg-black border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-red-500">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-2">Email</label>
+          <input type="email" name="email" required class="w-full bg-black border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-red-500">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-2">Company / Brand</label>
+          <input type="text" name="company" class="w-full bg-black border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-red-500">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-2">Interested Race(s)</label>
+          <input type="text" name="race" id="race-field" class="w-full bg-black border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-red-500" placeholder="e.g. Daytona, Nashville, or Full Season">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-2">Package Interest</label>
+          <select name="package" class="w-full bg-black border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-red-500">
+            <option>Primary Placement</option>
+            <option>Sticker / Associate</option>
+            <option>Not sure yet</option>
+            <option>Full Season</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-2">Message</label>
+          <textarea name="message" rows="5" class="w-full bg-black border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-red-500" placeholder="Tell us about your brand and goals..."></textarea>
+        </div>
+        <button type="submit" class="w-full bg-red-600 hover:bg-red-700 py-4 rounded-lg font-semibold text-lg transition">Send Inquiry</button>
+        <p class="text-xs text-gray-500 text-center">Or email us directly at sponsorship@freedomracingenterprises.com</p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="bg-zinc-950 border-t border-red-900/30 py-8 text-center text-gray-500 text-sm">
+    <p>© 2026 Freedom Racing Garage • <a href="index.html" class="hover:text-red-500">Home</a></p>
+  </footer>
+
+  <script>
+    // Pre-fill race if coming from sponsorship page
+    const params = new URLSearchParams(window.location.search);
+    const race = params.get('race');
+    const date = params.get('date');
+    if (race) {
+      document.getElementById('race-field').value = date ? `${race} (${date})` : race;
+    }
+  </script>
+</body>
+</html>
