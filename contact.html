@@ -55,7 +55,7 @@
         <p class="text-gray-400 mt-4">Tell us about your brand and which races interest you. We'll follow up with availability and package options.</p>
       </div>
 
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6 bg-zinc-900 border border-white/10 rounded-2xl p-8">
+      <form id="contact-form" class="space-y-6 bg-zinc-900 border border-white/10 rounded-2xl p-8">
         <div>
           <label class="block text-sm font-medium mb-2">Name</label>
           <input type="text" name="name" required class="w-full bg-black border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-red-500">
@@ -83,9 +83,10 @@
         </div>
         <div>
           <label class="block text-sm font-medium mb-2">Message</label>
-          <textarea name="message" rows="5" class="w-full bg-black border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-red-500" placeholder="Tell us about your brand and goals..."></textarea>
+          <textarea name="message" rows="5" required class="w-full bg-black border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-red-500" placeholder="Tell us about your brand and goals..."></textarea>
         </div>
         <button type="submit" class="w-full bg-red-600 hover:bg-red-700 py-4 rounded-lg font-semibold text-lg transition">Send Inquiry</button>
+        <div id="form-status" class="text-center text-sm hidden"></div>
         <p class="text-xs text-gray-500 text-center">Or email us directly at sponsorship@freedomracingenterprises.com</p>
       </form>
     </div>
@@ -103,6 +104,46 @@
     if (race) {
       document.getElementById('race-field').value = date ? `${race} (${date})` : race;
     }
+
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      status.classList.add('hidden');
+
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+
+        const result = await res.json();
+
+        if (res.ok) {
+          status.textContent = 'Thank you! We received your inquiry and will be in touch soon.';
+          status.className = 'text-center text-sm text-green-400';
+          status.classList.remove('hidden');
+          form.reset();
+        } else {
+          throw new Error(result.error || 'Failed to send');
+        }
+      } catch (err) {
+        status.textContent = 'Something went wrong. Please try again or email us directly.';
+        status.className = 'text-center text-sm text-red-400';
+        status.classList.remove('hidden');
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Send Inquiry';
+      }
+    });
   </script>
 </body>
 </html>
